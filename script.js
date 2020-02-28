@@ -14,9 +14,32 @@ loginBtn.addEventListener("mouseleave", function () {
 
 const depositBtn = document.getElementById("deposit");
 
-depositBtn.addEventListener("click", function() {
+depositBtn.addEventListener("click", function () {
     const depositAmount = document.getElementById("depositAmount").value;
     const depositNumber = parseFloat(depositAmount);
-    console.log(depositNumber);
-    
+
+    updateSpanText("currentDeposit", depositNumber);
+    updateSpanText("currentBalance", depositNumber);
+
+    document.getElementById("depositAmount").value = "";
+
+})
+
+function updateSpanText(id, depositNumber) {
+    const current = document.getElementById(id).innerText;
+    const currentNumber = parseFloat(current);
+
+    const total = depositNumber + currentNumber;
+
+    document.getElementById(id).innerText = total;
+}
+
+
+
+
+const loginBtn = document.getElementById('login');
+
+loginBtn.addEventListener("click", function () {
+    console.log("Clicked");
+
 })
