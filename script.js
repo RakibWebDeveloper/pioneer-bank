@@ -1,5 +1,6 @@
 const loginBtn = document.getElementById("login");
 loginBtn.addEventListener("mouseleave", function () {
-    console.log("Clicked");
+    const loginArea = document.getElementById("login-area");
+    loginArea.style.display = "none";
 
 })
