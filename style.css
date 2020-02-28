@@ -1,6 +1,6 @@
 body {
 
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     padding: 100px;
     font-weight: 500;
 }
@@ -15,4 +15,23 @@ body {
 
 #transaction-area {
     display: none;
+}
+
+.col-md-4 div {
+    margin: 0 20px 0 0;
+    color: whitesmoke;
+    padding:20px;
+    border-radius: 5px;
+}
+
+.deposit {
+    background-color: slateblue;
+}
+
+.withdraw {
+    background-color: lightsalmon;
+}
+
+.balance {
+    background-color: orange;
 }
