@@ -15,8 +15,7 @@ loginBtn.addEventListener("mouseleave", function () {
 const depositBtn = document.getElementById("deposit");
 
 depositBtn.addEventListener("click", function () {
-    const depositAmount = document.getElementById("depositAmount").value;
-    const depositNumber = parseFloat(depositAmount);
+    const depositNumber = getInputNumber("depositAmount");
 
     updateSpanText("currentDeposit", depositNumber);
     updateSpanText("currentBalance", depositNumber);
@@ -24,6 +23,22 @@ depositBtn.addEventListener("click", function () {
     document.getElementById("depositAmount").value = "";
 
 })
+
+
+// Withdraw button handler 
+
+const withdrawBtn = document.getElementById("addWithdraw");
+withdrawBtn.addEventListener("click", function () {
+    const withdrawNumber = getInputNumber("withdrawAmount");
+    console.log(withdrawNumber);
+    
+})
+
+function getInputNumber(id) {
+    const Amount = document.getElementById(id).value;
+    const AmountNumber = parseFloat(Amount);
+    return AmountNumber;
+}
 
 function updateSpanText(id, depositNumber) {
     const current = document.getElementById(id).innerText;
@@ -33,13 +48,3 @@ function updateSpanText(id, depositNumber) {
 
     document.getElementById(id).innerText = total;
 }
-
-
-
-
-const loginBtn = document.getElementById('login');
-
-loginBtn.addEventListener("click", function () {
-    console.log("Clicked");
-
-})
